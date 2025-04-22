@@ -11,20 +11,20 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.time.Duration;
 
 
-
-
 public class WaitUntil extends AbstactPage {
     public WaitUntil(WebDriver driver) {
-        super (driver);
+        super(driver);
     }
-    public static void waitUntilElementIsDisplayed (WebElement element) {
+
+    public static void waitUntilElementIsDisplayed(WebElement element) {
         WebDriverWait webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(10));
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(element.getText())));
     }
-    public static void waitUntil (long seconds) {
+
+    public static void waitUntil(long seconds) {
         try {
-            Thread.sleep(seconds*1000);
-        }catch (InterruptedException e) {
+            Thread.sleep(seconds * 1000);
+        } catch (InterruptedException e) {
 
         }
     }

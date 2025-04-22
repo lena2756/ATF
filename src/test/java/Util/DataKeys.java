@@ -1,4 +1,6 @@
 package Util;
 
-public class DataKeys {
+public enum DataKeys {
+    USERNAME,
+    PASSWORD;
 }
